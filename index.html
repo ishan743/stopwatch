@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Watch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container mt-5 h-position-relative">
+        <div>
+            <h1 class="title">Stop Watch</h1>
+        </div>
+
+        <div class="circle mt-5">
+            <div>
+                <h1 class="labels">Min <span class="circleContent-span">:</span></h1>
+                <h1 id="min" class="circleContent">00</h1>
+                <h1 class="labels">Sec <span class="circleContent-span">:</span></h1>
+                <h1 id="sec" class="circleContent">00</h1>
+                <h1 class="labels">Millisec</h1>
+                <h1 id="msec" class="circleContent">00</h1>
+            </div>
+            <div>
+            </div>
+
+            <div class="h-position-absolute h-tl">
+                <button id="start" onclick="start()" type="button" class="btn bg-success text-light btn-circle btn-md mr-1">start</button>
+                <button onclick="stop()" type="button" class="btn bg-danger text-light btn-circle btn-md mr-1"><i class="fa fa-pause">stop</i></button>
+                <button onclick="lapTimer()" id="lapButton" type="button" class="btn btn-primary btn-circle btn-md mr-1"><i class="fas fa-stopwatch">lap</i></button>
+                <button onclick="reset()" type="button" class="btn btn-primary btn-circle btn-md mr-1"><i class="fa fa-refresh">reset</i></button>
+            </div>
+
+        </div>
+        <br />
+        <h1>Laps</h1>
+        <div class="row" id="laps">
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+
+</html>
